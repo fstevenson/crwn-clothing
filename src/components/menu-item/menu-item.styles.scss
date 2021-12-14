@@ -35,11 +35,10 @@
   }
 
   .background-image {
-    height: 100%;
     width: 100%;
-
-    background-position: center;
+    height: 100%;
     background-size: cover;
+    background-position: center;
   }
 
   .content {
@@ -56,14 +55,16 @@
 
     .title {
       font-weight: bold;
-      margin-bottom: 6px;
-      font-size: 22px;
+      margin: 0 6px 0;
+      font-size: 2rem;
       color: #4a4a4a;
     }
 
     .subtitle {
       font-weight: lighter;
-      font-size: 16px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #4a4a4a;
     }
   }
 }

@@ -12,6 +12,7 @@ import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   updateProfile,
+  signInWithEmailAndPassword,
 } from 'firebase/auth';
 
 const config = {
@@ -43,6 +44,8 @@ export const signUp = (email, password) =>
 
 export const updateUserProfile = (user, additionalData) =>
   updateProfile(user, additionalData);
+
+export { signInWithEmailAndPassword };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;

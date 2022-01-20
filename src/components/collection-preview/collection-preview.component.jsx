@@ -1,5 +1,4 @@
 import React from "react";
-import { addItem } from "../../redux/cart/cart.action";
 
 import CollectionItem from "../collection-item/collection-item.component";
 

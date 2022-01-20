@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 import "./App.css";
@@ -9,6 +9,7 @@ import ShopPage from "./pages/shop/shop.component";
 import Header from "./components/header/header.component";
 import SignAndSigunUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
+import CollectionPage from "./pages/collection/collection.component";
 
 import { setCurrentUser } from "./redux/user/user.action";
 import { selectCurrentUser } from "./redux/user/user.selector";
@@ -52,9 +53,10 @@ class App extends React.Component {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/shop/:collectionId" element={<CollectionPage />} />
+          <Route path="checkout" element={<CheckoutPage />} />
           <Route
-            path="/signin"
+            path="signin"
             element={
               this.props.currentUser ? (
                 <Navigate to="/" />
